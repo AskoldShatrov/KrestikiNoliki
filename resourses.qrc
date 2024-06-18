@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resourses/fonts/Roboto-Medium.ttf</file>
+        <file>resourses/fonts/Roboto-MediumItalic.ttf</file>
+        <file>resourses/images/bg.png</file>
+        <file>resourses/images/cross_large.png</file>
+        <file>resourses/images/cross_small.png</file>
+        <file>resourses/images/name.png</file>
+        <file>resourses/images/title_ico.png</file>
+        <file>resourses/images/zero_large.png</file>
+        <file>resourses/images/zero_small.png</file>
+        <file>resourses/images/photo_2024-05-16_21-33-44.jpg</file>
+        <file>resourses/images/photo_2024-05-16_22-12-43.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-46.jpg</file>
+        <file>resourses/images/backimages/back.png</file>
+        <file>resourses/images/backimages/photo_2024-05-18_03-11-01.png</file>
+        <file>resourses/images/back/photo_2024-05-18_01-38-41.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-02.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-06.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-12.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-16.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-19.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-24.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-27.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-32.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-37.jpg</file>
+        <file>resourses/images/back/photo_2024-05-18_01-39-41.jpg</file>
+    </qresource>
+</RCC>
