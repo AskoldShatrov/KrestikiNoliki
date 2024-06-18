@@ -34,6 +34,9 @@ private slots:
     //запись on_ использует метаобъектный компилятор
     void onGameAreaButtonClicked();
     void onComputerSlot();
+
+
+
 private:
     Ui::Widget *ui;
     void setInterfaceStyle();
@@ -55,10 +58,11 @@ private:
     void setRandomBackground();
     void startBackgroundTimer();
 
+
+
     char gameArea[3][3] = {
         {'-', '-', '-'}, {'-', '-', '-'}, {'-', '-', '-'}
     };
-
     char player = 'X'; // X или O
     int progress = 0;
     bool gameStart = false;
@@ -68,5 +72,9 @@ private:
     char winner;
 
 };
+
+
+
+
 
 #endif // WIDGET_H

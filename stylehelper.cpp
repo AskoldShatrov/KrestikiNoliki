@@ -1,10 +1,7 @@
-    #include "stylehelper.h"
-    #include <QStringList>
-    #include <QRandomGenerator>
-    #include <QDir>
-
-
-
+#include "stylehelper.h"
+#include <QStringList>
+#include <QRandomGenerator>
+#include <QDir>
 
 QString StyleHelper::getCrossComputerVictoryStyle()
 {

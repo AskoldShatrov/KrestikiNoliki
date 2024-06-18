@@ -19,11 +19,14 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
     setMainWidgetBackground();
+
     configurationTabWidget();
     addFonts();
     setInterfaceStyle();
+
     player = 'X';
     changeButtonStatus(0);
+
     configurationGameAreaButtons();
     timer = new QTimer(this);
     connect (timer,&QTimer::timeout,this,&Widget::onComputerSlot);
@@ -71,13 +74,14 @@ void Widget::setRandomBackground()
         QString style = QString("QWidget { background-image: url(%1); background-repeat: no-repeat; background-size: cover; }").arg(randomImagePath);
         this->setStyleSheet(style);
         ui->messageLabel->setStyleSheet(StyleHelper::getNormalMessegeStyle());
+
     }
 }
 void Widget::startBackgroundTimer() {
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &Widget::setRandomBackground);
     timer->start(6000);
-
+}
 
 //Позволяет использовать правила QSS для основного виджета который является наследником QWIDGET
 void Widget::paintEvent(QPaintEvent *event)
@@ -91,7 +95,6 @@ void Widget::paintEvent(QPaintEvent *event)
 
 void Widget::setInterfaceStyle()
 {
-
     ui->startButton->setStyleSheet(StyleHelper::getStartButtonsStyle());
     ui->aboutButton->setStyleSheet(StyleHelper::getStartButtonsStyle());
     ui->rightButton->setStyleSheet(StyleHelper::getRightButtonActiveStyle());
@@ -104,7 +107,7 @@ void Widget::setInterfaceStyle()
 
     setGameAreaButtons();
 
-    ui->messageLabel->setText("ПРИВЕТ КРАСОТКА");
+    ui->messageLabel->setText("ПРИВЕТ");
     ui->messageLabel->setStyleSheet(StyleHelper::getNormalMessegeStyle());
     ui->messageLabel->setStyleSheet(StyleHelper::getNormalMessegeStyle());
     ui->tab_2->setStyleSheet(StyleHelper::getTab1Tab2Style());
@@ -150,7 +153,6 @@ void Widget::changeButtonStyle(int row, int column, const QString& style)
 {
     QGridLayout *grid = qobject_cast<QGridLayout*>(ui->tab->layout());
     QPushButton *btn = qobject_cast<QPushButton*>(grid->itemAtPosition(row, column)->widget());
-    // Получили указатель на кнопку, которую получили из дизайнера Qt Designer
     btn->setStyleSheet(style);
 
 }
@@ -233,7 +235,7 @@ void Widget::on_startButton_clicked()
         ui->leftButton->setDisabled(false);
         ui->rightButton->setDisabled(false);
         gameStart = false;
-        ui->messageLabel->setText("ЛОХ");
+        ui->messageLabel->setText("ПРОИГРАЛ");
         ui->messageLabel->setStyleSheet(StyleHelper::getLostMessegeStyle());
     }
     else {
@@ -276,7 +278,6 @@ void Widget::onGameAreaButtonClicked()
         checkGameStop();
         endGame();
         computerInGame();
-
         // Отключаем кнопку после нажатия
         btn->setEnabled(false);
     }
@@ -458,8 +459,3 @@ void Widget::on_aboutButton_clicked()
 {
     ui->tabWidget->setCurrentIndex(1);
 }
-// ui->pushButton_10->setStyleSheet(); если хочу адрессоваться к конкретному
-// ui->tabWidget->setStyleSheet("QPushButton{color:#f00;}");
-// int id = QFontDatabase::addApplicationFont(":/resourses/fonts/Roboto-Medium.ttf");
-// QString family =  QFontDatabase::applicationFontFamilies(id).at(0);
-// qDebug() << family; //для выяснения имени шрифта с которым нужно будет работать
